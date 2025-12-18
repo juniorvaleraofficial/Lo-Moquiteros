@@ -1,7 +1,8 @@
 // Modulo Matrices en JavaScript
-// Ejemplo de matrices en JavaScript
+// Sintaxis simplificada de matrices en JavaScript
 
 let matriz=[[],[],[]];
+let matrizSimple = [[10,20,30],[100,200,300],[1000,2000,3000]];// sintaxis simplificada
 
 // Modificar los valores 
 // Renglon [0]
@@ -21,4 +22,7 @@ matriz[2][2] = 350;
 
 
 // Leer los valores
+console.log("Matriz normal: ");
 console.log(`matriz[2][2] = ${matriz[2][2]}`);
+console.log("matriz simplificada: ");
+console.log(`matrizSimple[0][1]; = ${matrizSimple[0][2]}`);
