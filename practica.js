@@ -7,4 +7,5 @@ function suma(a, b){
     console.log(`Suma = ${a + b}`);
 }
 
+// Llamar a procedimiento
 sum = suma(5, 5);
