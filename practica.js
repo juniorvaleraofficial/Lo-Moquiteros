@@ -1,19 +1,10 @@
-// Modulo Matrices en JavaScript
-// Iterar una matriz en JavaScript
+// Modulo Funciones en JavaScript
+// Procedimientos en JS
 
-let matriz = [[10,20,30],[100,200,300],[1000,2000,3000]];// sintaxis simplificada
-
-console.log(matriz.length);
-console.log(matriz[0].length);
-
-for (let fila = 0; fila < matriz.length; fila++) {
-    for (let col = 0; col < matriz[fila].length; col++){
-        console.log(`matriz[${fila}][${col}] = ${matriz[fila][col]}`);
-    }
+// 1. Definir el procedimiento
+function suma(a, b){
+    // Cuerpo de la funcion
+    console.log(`Suma = ${a + b}`);
 }
 
-for (let i = 0; i < matriz.length; i++) {
-    const element = matriz[i];
-    console.log(element);
-    
-}
+sum = suma(5, 5);
