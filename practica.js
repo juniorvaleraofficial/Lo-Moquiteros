@@ -1,11 +1,11 @@
 // Modulo Funciones en JavaScript
-// Procedimientos en JS
+// Funciones en JS
 
-// 1. Definir el procedimiento
+// 1. Definir la funcion
 function suma(a, b){
-    // Cuerpo de la funcion
-    console.log(`Suma = ${a + b}`);
+    return a + b;
 }
 
-// Llamar a procedimiento
-sum = suma(5, 5);
+// Llamar la funcion
+sum = suma(5,5);
+console.log(`a + b = ${sum}`);
