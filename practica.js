@@ -1,11 +1,12 @@
 // Modulo Funciones en JavaScript
-// Funciones en JS
+// Objetos (Arrays) se pasan por referencia
 
-// 1. Definir la funcion
-function suma(a, b){
-    return a + b;
+function cambiarValor(parametro){
+    parametro[0] = 20;
 }
 
-// Llamar la funcion
-sum = suma(5,5);
-console.log(`a + b = ${sum}`);
+// Llama a la funcion
+let arreglo = [10];
+console.log(`Valor Antes de la funcion ${arreglo[0]}`);// paso por valor 
+cambiarValor(arreglo);
+console.log(`Valor despues de la funcion: ${arreglo[0]}`);// paso por referencia
