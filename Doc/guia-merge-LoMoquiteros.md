@@ -71,7 +71,7 @@ Si `git pull` falla por cambios locales, ve a la sección **“Problemas comunes
 
 ---
 
-### 4) Fusiona tu rama local hacia `JunioRepo`
+### 4) Fusiona tu rama local hacia `tuRepo`
 > Sustituye `TU_RAMA_LOCAL` por el nombre real (ej: `html_css_JavaScript`).
 
 ```bash
@@ -99,12 +99,12 @@ Git te avisará qué archivos tienen conflictos.
 Luego confirma la resolución:
 ```bash
 git add .
-git commit -m "Resolver conflictos al fusionar TU_RAMA_LOCAL con JunioRepo"
+git commit -m "Resolver conflictos al fusionar TU_RAMA_LOCAL con tuRepo"
 ```
 
 ---
 
-### 6) Sube `JunioRepo` a GitHub (para que el equipo lo vea)
+### 6) Sube `tuRepo` a GitHub (para que el equipo lo vea)
 ```bash
 git push origin tuRepo
 ```
@@ -211,7 +211,7 @@ git commit -m "Resolver conflictos"
 
 ---
 
-## Checklist antes de hacer merge a `JunioRepo`
+## Checklist antes de hacer merge a `tuRepo`
 
 - [ ] Mi rama local tiene commits (no trabajo “suelto”).
 - [ ] Actualicé `tuRepo` con `git pull`.
