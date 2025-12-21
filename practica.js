@@ -3,10 +3,11 @@
 
 function cambiarValor(parametro){
     parametro = "adios"
+    cadena[0] = parametro;
 }
-
+let cadena = [0];
 // Llama a la funcion
-let cadena = "hola"
-console.log(`Valor Antes de la funcion ${cadena}`);
-cambiarValor(cadena);
-console.log(`Valor despues de la funcion: ${cadena}`);
+cadena[0] = "hola"
+console.log(`Valor Antes de la funcion ${cadena[0]}`);
+cambiarValor(cadena[0]);
+console.log(`Valor despues de la funcion: ${cadena[0]}`);
