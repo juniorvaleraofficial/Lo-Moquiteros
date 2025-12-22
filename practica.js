@@ -1,13 +1,14 @@
 // Modulo Funciones en JavaScript
-// Ejemplo de paso de cadena en JS
+// Funciones Recursivas en JS
 
-function cambiarValor(parametro){
-    parametro = "adios"
-    cadena[0] = parametro;
+function funcionRecursiva(numero){
+    if(numero == 1){
+        console.log(numero);
+    }
+    else{
+        console.log(numero);
+        funcionRecursiva(numero -1);
+    }
 }
-let cadena = [0];
 // Llama a la funcion
-cadena[0] = "hola"
-console.log(`Valor Antes de la funcion ${cadena[0]}`);
-cambiarValor(cadena[0]);
-console.log(`Valor despues de la funcion: ${cadena[0]}`);
+funcionRecursiva(20);
