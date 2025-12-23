@@ -1,4 +1,5 @@
 // diferencia entre objetos y tipo primitivos
+// funciones en objetos
 
 // primitivo
 let x = 10;
@@ -8,7 +9,10 @@ let persona = {
     nombre: 'Junior',
     apellido: 'Valera',
     edad: 30,
-    email: 'detoprox@gmail.com'
+    email: 'detoprox@gmail.com',
+    nombreCompleto: function(){
+        return this.nombre + ' ' + this.apellido;
+    }
 }
 
-console.log(typeof(persona));
+console.log(persona.nombreCompleto());
