@@ -1,11 +1,12 @@
 // Modulo Funciones incorporadas JavaScript
 
-// subcadenas en JavaScript
+// Convertir de cadena a numero en JavaScript
 
-let cadena3 = 'hola Mundo';
+// si son cadenas se concatenan
+let a = '10', b = '20';
+console.log(a+b);
 
-// substring(indice_inicio, indice_fin - 1)
-// no se incluye el caracter indice_fin
-let cadena1 = cadena3.substring(5,10);
+// convertir a nuemeros para que se sumen
+let cadena = parseInt(b) + parseInt(a);
 
-console.log(cadena1);
+console.log(cadena);
