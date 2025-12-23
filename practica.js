@@ -1,12 +1,12 @@
 // Modulo Funciones incorporadas JavaScript
 
-// Convertir de cadena a numero en JavaScript
+// Convertir de numero a cadena en JavaScript
 
-// si son cadenas se concatenan
-let a = '10', b = '20';
+// si son Valores numericos se suman
+let a = 10, b = 20;
 console.log(a+b);
 
-// convertir a nuemeros para que se sumen
-let cadena = parseInt(b) + parseInt(a);
+// convertir a cadena para que se concatenen
+let nConvertir = a.toString() + b.toString();
 
-console.log(cadena);
+console.log(nConvertir);
