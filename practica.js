@@ -1,6 +1,12 @@
 // Modulo Funciones incorporadas JavaScript
 
-//Valor absoluto
-let numero = -15.55;
-let valorAbsoluto = Math.abs(numero);
-console.log(`numero = ${numero} valor absoluto ${valorAbsoluto}`);
+//Redondeo y truncado en JavaScript
+let numero = 5.7, redondeo, truncado;
+
+// en el redondeo redondea a partir de 5 > 6
+redondeo = Math.round(numero);
+console.log(redondeo);
+
+// en el truncado elimina la parte decimal
+truncado = Math.trunc(numero);
+console.log(truncado);
