@@ -16,3 +16,10 @@ let persona = {
 }
 
 console.log(persona.nombreCompleto());
+
+let persona2 = new Object();
+persona2.nombre = "carlos";
+persona2.apellido = "Ramirez";
+persona2.edad = 38;
+
+console.log(persona2);
