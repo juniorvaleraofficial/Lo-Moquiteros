@@ -1,5 +1,5 @@
 // Funcion constructor de tipo persona
-// Agregar metodo a un constructor de Objetos
+// uso de Prototype en JS
 
 function Persona(nombre, apellido, email){
     this.nombre = nombre;
@@ -9,11 +9,10 @@ function Persona(nombre, apellido, email){
         return this.nombre +' '+ this.apellido;
     }
 }
+Persona.prototype.tel = '809-966-3715';
 
 let padre = new Persona('Martin', 'Peralta', 'mPeralta@mail.com');
 let madre = new Persona('Raquel', 'Rivera', 'rRivera@mail.com');
-
-console.log(padre.nombreCompleto());
-padre.nombre = 'Hector';
-console.log(padre);
-console.log(madre.nombreCompleto());
+console.log(padre.tel);
+madre.tel = '829-440-4818';
+console.log(madre.tel);
