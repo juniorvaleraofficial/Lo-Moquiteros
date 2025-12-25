@@ -10,7 +10,16 @@ let persona = {
     }
 }
 
-for (const nombrePropiedad in persona) {
+/** for (const nombrePropiedad in persona) {
     
     console.log(persona[nombrePropiedad]);
 }
+
+
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+*/
+
+let personaString = JSON.stringify(persona);
+console.log(personaString);
