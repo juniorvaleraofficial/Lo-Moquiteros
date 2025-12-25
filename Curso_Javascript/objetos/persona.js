@@ -1,24 +1,13 @@
-// Objetos 
-// funciones en objetos
-let persona = {
-    nombre: 'Junior',
-    apellido: 'Valera',
-    edad: 30,
-    email: 'detoprox@gmail.com',
-    idioma: 'es',
-    get lang(){
-        return this.idioma.toUpperCase();
-    },
-    set lang(lang){
-        return this.idioma = lang.toUpperCase();
-    },   
-    get nombreCompleto(){
-        return this.nombre + ' ' + this.apellido;
-    }
+// Funcion constructor de tipo persona
+
+function Persona(nombre, apellido, email){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
 }
 
-console.log(persona.idioma);
+let padre = new Persona('Martin', 'Peralta', 'mPeralta@mail.com');
+let madre = new Persona('Raquel', 'Rivera', 'rRivera@mail.com');
 
-persona.lang = 'En';
-
-console.log(persona.lang);
+console.log(padre);
+console.log(madre);
