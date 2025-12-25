@@ -5,9 +5,20 @@ let persona = {
     apellido: 'Valera',
     edad: 30,
     email: 'detoprox@gmail.com',
-   get nombreCompleto(){
+    idioma: 'es',
+    get lang(){
+        return this.idioma.toUpperCase();
+    },
+    set lang(lang){
+        return this.idioma = lang.toUpperCase();
+    },   
+    get nombreCompleto(){
         return this.nombre + ' ' + this.apellido;
     }
 }
 
-console.log(persona.nombreCompleto);
+console.log(persona.idioma);
+
+persona.lang = 'En';
+
+console.log(persona.lang);
