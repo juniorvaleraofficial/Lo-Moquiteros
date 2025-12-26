@@ -11,7 +11,7 @@ let persona2 = {
     apellido: 'Fulcal'
 }
 
-// paso de argumetnos a Call en JavaScript
+// paso de argumentos con apply en JavaScript
 // para usar el metodo en persona.nombreCompleto con los datos de persona2
 
-console.log(persona.nombreCompleto.call(persona2, 'ing', '1809-966-3715'));
+console.log(persona.nombreCompleto.apply(persona2, ['ing', '+1 809-966-3715']));
