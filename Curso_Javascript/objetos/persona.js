@@ -1,17 +1,11 @@
-let persona = {
-    nombre: 'Pedro',
-    apellido: 'Rondon',
-    nombreCompleto: function(titulo, tel){
-        return titulo +': ' + this.nombre + ' ' + this.apellido + ' '+ tel;
+// uso de clases en JS
+class Persona{
+    constructor(nombre, apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 }
 
-let persona2 = {
-    nombre: 'Mario',
-    apellido: 'Fulcal'
-}
+let persona1 = new Persona('Junior', 'Valera');
 
-// paso de argumentos con apply en JavaScript
-// para usar el metodo en persona.nombreCompleto con los datos de persona2
-
-console.log(persona.nombreCompleto.apply(persona2, ['ing', '+1 809-966-3715']));
+console.log(persona1);
