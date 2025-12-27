@@ -39,6 +39,11 @@ class Empleado extends Persona{
     set departamento(departamento){
         return this._departamento = departamento;
     }
+
+    // Sobreescritura en JS
+    nombreCompleto(){
+        return super.nombreCompleto() + ': ' + this._departamento;
+    }
 }
 
 let persona1 = new Persona('Junior', 'Valera');
@@ -46,4 +51,4 @@ console.log(persona1.apellido);
 
 let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
 
-console.log(`La señora ${empleado1.nombreCompleto()} Trabaja en el departamento de ${empleado1.departamento}`);
+console.log(`SR ${empleado1.nombreCompleto()}`);
