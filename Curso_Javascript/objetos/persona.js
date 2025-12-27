@@ -1,19 +1,54 @@
-// Funcion constructor de tipo persona
-// Agregar metodo a un constructor de Objetos
+// uso de clases en JS
+// HERENCIA DE CLASES EN JS HEREDAR METODOS
+class Persona{
+    constructor(nombre, apellido){
+        this._nombre = nombre;
+        this._apellido = apellido;
+    }
 
-function Persona(nombre, apellido, email){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.email = email;
-    this.nombreCompleto = function(){
-        return this.nombre +' '+ this.apellido;
+    get nombre(){
+        return this._nombre;
+    }
+
+    set nombre(nombre){
+        return this._nombre = nombre;
+    }
+
+    get apellido(){
+        return this._apellido;
+    }
+    set apellido(apellido){
+        return this._apellido = apellido;
+    }
+
+    nombreCompleto(){
+        return this._nombre + ' ' + this._apellido;
     }
 }
 
-let padre = new Persona('Martin', 'Peralta', 'mPeralta@mail.com');
-let madre = new Persona('Raquel', 'Rivera', 'rRivera@mail.com');
+class Empleado extends Persona{
+    constructor(nombre, apellido, departamento){
+        super(nombre, apellido, departamento);
+        this._departamento = departamento;
+    }
 
-console.log(padre.nombreCompleto());
-padre.nombre = 'Hector';
-console.log(padre);
-console.log(madre.nombreCompleto());
+    get departamento(){
+        return this._departamento;
+    }
+
+    set departamento(departamento){
+        return this._departamento = departamento;
+    }
+
+    // Sobreescritura en JS
+    nombreCompleto(){
+        return super.nombreCompleto() + ': ' + this._departamento;
+    }
+}
+
+let persona1 = new Persona('Junior', 'Valera');
+console.log(persona1.apellido);
+
+let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
+
+console.log(`SR ${empleado1.nombreCompleto()}`);
