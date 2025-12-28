@@ -1,5 +1,5 @@
 // uso de clases en JS
-// HERENCIA DE CLASES EN JS HEREDAR METODOS
+// POLIMORFISMO EN JS
 class Persona{
     constructor(nombre, apellido){
         this._nombre = nombre;
@@ -24,6 +24,10 @@ class Persona{
     nombreCompleto(){
         return this._nombre + ' ' + this._apellido;
     }
+
+    toString(){
+        return this.nombreCompleto();
+    }
 }
 
 class Empleado extends Persona{
@@ -44,6 +48,7 @@ class Empleado extends Persona{
     nombreCompleto(){
         return super.nombreCompleto() + ': ' + this._departamento;
     }
+
 }
 
 let persona1 = new Persona('Junior', 'Valera');
@@ -52,3 +57,5 @@ console.log(persona1.apellido);
 let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
 
 console.log(`SR ${empleado1.nombreCompleto()}`);
+
+console.log(empleado1.toString());
