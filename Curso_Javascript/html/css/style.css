@@ -1,0 +1,34 @@
+span {
+  content: "\276C";
+}
+
+#imagen ,a , img{
+    display: flex;
+    justify-content: center;
+}
+p{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+a:link{
+    color: rgb(6, 6, 250);
+}
+
+a:visited {
+    color: rgb(231, 11, 11);
+}
+
+a:hover {
+    color: black;
+}
+
+h1{
+    background: yellowgreen;
+    color: red;
+    text-align: center;
+}
+
+
