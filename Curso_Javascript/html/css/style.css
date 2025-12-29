@@ -1,0 +1,22 @@
+p{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(231, 11, 11);
+}
+
+a:hover {
+    color: black;
+}
+
+h1{
+    background: yellowgreen;
+    color: red;
+    text-align: center;
+}
+
+

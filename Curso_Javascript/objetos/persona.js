@@ -52,7 +52,7 @@ class Empleado extends Persona{
 }
 
 let persona1 = new Persona('Junior', 'Valera');
-console.log(persona1.apellido);
+console.log(persona1.toString());
 
 let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
 
