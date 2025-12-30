@@ -28,6 +28,10 @@ class Persona{
     toString(){
         return this.nombreCompleto();
     }
+
+    static saludar(nombre){
+        return 'Hola '+ nombre + ' desde el metodo estatico: ';
+    }
 }
 
 class Empleado extends Persona{
@@ -59,3 +63,10 @@ let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
 console.log(`SR ${empleado1.nombreCompleto()}`);
 
 console.log(empleado1.toString());
+
+// usando metodo estatico:
+// console.log(persona1.saludar()); // no funciona con objetos
+
+// el metodo estatic solo funciona con la clase
+
+console.log(Persona.saludar(persona1));
