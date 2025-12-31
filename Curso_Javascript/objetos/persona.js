@@ -2,10 +2,19 @@
 // Ejemplo de uso de la palabra static en JS
 class Persona{
     static contadorPersonas = 0;
+
+    static get limitador(){// Limitador statico 
+        return 4;
+    }
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
-        this.idPersonas = ++Persona.contadorPersonas;// contador de objetos 
+       if (Persona.contadorPersonas < Persona.limitador) {// Propiedades de la clase
+            this.idPersonas = ++Persona.contadorPersonas;// contador de objetos 
+       }
+       else {
+            console.log('Usted a superador el Limite de Objetos: ');
+       }
     }
 
     get nombre(){
@@ -63,5 +72,11 @@ console.log(persona1.toString());
 let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
 console.log(empleado1.toString());
 
-let empleado2 = new Empleado('Carlos', 'Duran', 'Administracion0');
+let empleado2 = new Empleado('Carlos', 'Duran', 'Administracion');
 console.log(empleado2.toString());
+
+let empleado3 = new Empleado('Rosario', 'Martinez', 'Cajera');
+console.log(empleado3.toString());
+
+let empleado4 = new Empleado('Alicia', 'Rivera', 'Sistemas Tecnologicos');
+console.log(empleado4.toString());
