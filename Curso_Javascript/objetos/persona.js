@@ -1,9 +1,11 @@
 // uso de clases en JS
-// POLIMORFISMO EN JS
+// Ejemplo de uso de la palabra static en JS
 class Persona{
+    static contadorPersonas = 0;
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        this.idPersonas = ++Persona.contadorPersonas;// contador de objetos 
     }
 
     get nombre(){
@@ -26,11 +28,11 @@ class Persona{
     }
 
     toString(){
-        return this.nombreCompleto();
+        return this.idPersonas + ' ' + this.nombreCompleto();
     }
 
     static saludar(nombre){
-        return 'Hola '+ nombre + ' desde el metodo estatico: ';
+        return 'Hola '+ nombre + ' desde el Metodo estatico: ';
     }
 }
 
@@ -59,14 +61,7 @@ let persona1 = new Persona('Junior', 'Valera');
 console.log(persona1.toString());
 
 let empleado1 = new Empleado('Maria', 'Gonzales', 'Recursos Humanos');
-
-console.log(`SR ${empleado1.nombreCompleto()}`);
-
 console.log(empleado1.toString());
 
-// usando metodo estatico:
-// console.log(persona1.saludar()); // no funciona con objetos
-
-// el metodo estatic solo funciona con la clase
-
-console.log(Persona.saludar(persona1));
+let empleado2 = new Empleado('Carlos', 'Duran', 'Administracion0');
+console.log(empleado2.toString());
