@@ -1,8 +1,10 @@
+table {
+    width: 100%;
+}
 table ,tr ,th ,td {
     border: 1px solid;
     border-collapse: collapse;
     padding: 8px;
-    text-align: left;
 }
 
 th {
@@ -12,4 +14,5 @@ th {
 
 td{
     background-color: aquamarine;
+    text-align: center;
 }
