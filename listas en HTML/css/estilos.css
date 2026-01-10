@@ -1,0 +1,8 @@
+li{
+    list-style-type: square;
+    color: brown;
+}
+
+.seculist{
+    list-style-type: disc;
+}
