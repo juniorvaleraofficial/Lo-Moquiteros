@@ -1,18 +1,16 @@
-.viga-regular {
-  font-family: "Indie Flower", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+.viga-regular{
+    font-family: Verdana, sans-serif;
+}
+
 ul{
     list-style-type: none;
-    background-color: #0000A0;
+    background-color: #457b9d;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -26,10 +24,10 @@ li a{
     display: block;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
     text-decoration: none;
 }
 
-li a:hover{
-    background-color: #0020C2;
+a:hover{
+    background-color: #4786ae;
 }
