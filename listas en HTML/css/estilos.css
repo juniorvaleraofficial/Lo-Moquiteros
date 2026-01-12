@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.viga-regular{
+    font-family: Verdana, sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    background-color: #454b9d;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #474aae;
+}
