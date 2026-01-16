@@ -1,33 +1,20 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
 .viga-regular{
-    font-family: Verdana, sans-serif;
+    font-family: 'viga';
 }
 
-ul{
+ol{
     list-style-type: none;
-    background-color: #454b9d;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+    counter-reset: contador;
 }
 
-li{
-    float: left;
+ol li{
+    counter-increment: contador;
 }
 
-li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    text-decoration: none;
+ol li::before{
+    content: 'Curso ' counter(contador) ' ) ';
 }
 
-a:hover{
-    background-color: #474aae;
+ol li::after{
+    content: ' .';
 }
