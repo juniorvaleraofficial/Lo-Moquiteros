@@ -50,14 +50,16 @@ class Orden{
     }
 
     agregarProducto(producto){
-        if( this._productos.length < Orden.MAX_PRODUCTOS){
-            this._productos.push(producto);
-            //this._productos[this._contadorProductosAgregados++] = producto;
-        }
-        else{
-            console.log('No se pueden agregar más productos');
-        }
+    console.log("Antes:", this._productos.length);
+    if(this._productos.length < Orden.MAX_PRODUCTOS){
+        this._productos.push(producto);
+        console.log("Agregado:", producto.nombre);
+    } else {
+        console.log("Bloqueado: límite alcanzado");
     }
+    console.log("Después:", this._productos.length);
+    }
+
 
     calcularTotal(){
         let totalVenta = 0;
