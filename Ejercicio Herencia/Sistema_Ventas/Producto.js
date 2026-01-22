@@ -1,10 +1,9 @@
 class Producto{
     static contadorProductos = 0;
-
     constructor(nombre, precio){
-        this._idProducto = ++Producto.contadorProductos;
         this._nombre = nombre;
         this._precio = precio;
+        this._idProducto = ++ Producto.contadorProductos;
     }
 
     get idProducto(){
@@ -16,86 +15,72 @@ class Producto{
     }
 
     set nombre(nombre){
-        this._nombre = nombre;
+        return this._nombre = nombre;
     }
 
     get precio(){
         return this._precio;
     }
-    
+
     set precio(precio){
         return this._precio = precio;
     }
 
     toString(){
-        return `idProducto: ${this._idProducto}, nombre: ${this._nombre}, precio: $${this._precio}  `;
+        return `id:|${this._idProducto}|\nnombre: "${this._nombre}"\nprecio: $${this._precio} USD`;
     }
 }
 
 class Orden{
     static contadorOrdenes = 0;
-
     static get MAX_PRODUCTOS(){
-        return 5;
-    } 
-
+        return 3;
+    }
     constructor(){
-        this._idOrden = ++Orden.contadorOrdenes;
-        this._productos = [];
-        //this._contadorProductosAgregados = 0;
+        this._producto = [];
+        this._idOrden = ++ Orden.contadorOrdenes;
     }
 
-    get idOrden(){
-        return this._idOrden;
+    get idProducto(){
+        return this._idProducto;
     }
 
-    agregarProducto(producto){
-    console.log("Antes:", this._productos.length);
-    if(this._productos.length < Orden.MAX_PRODUCTOS){
-        this._productos.push(producto);
-        console.log("Agregado:", producto.nombre);
-    } else {
-        console.log("Bloqueado: límite alcanzado");
-    }
-    console.log("Después:", this._productos.length);
-    }
+    agregarProductos(producto){
+        if(this._producto.length < Orden.MAX_PRODUCTOS){
+            this._producto.push(producto);
+        }
+        else{
+            console.log("Usted paso el limite de productos:");
+        }
 
+    }
 
     calcularTotal(){
         let totalVenta = 0;
-        for(let producto of this._productos){
+        for(let producto of this._producto){
             totalVenta += producto.precio;//totalVenta = totalVenta + producto.precio
         }
         return totalVenta;
     }
 
-    mostrarOrden(){
+     mostrarOrden(){
         let productosOrden = '';
-        for( let producto of this._productos){
+        for( let producto of this._producto){
             productosOrden += '\n{' + producto.toString() + '}';
         }
 
         console.log(`Orden: ${this._idOrden} Total: $${this.calcularTotal()}, Productos: ${productosOrden} `);
     }
-
 }
 
-
-
-let producto1 = new Producto('Pantalón', 200);
-let producto2 = new Producto('Camisa', 100);
-
+let producto1 = new Producto('Honda accord 2026', 28.395);
+let producto2 = new Producto('bugatti chiron',3000000);
 let orden1 = new Orden();
-orden1.agregarProducto(producto1);
-orden1.agregarProducto(producto2);
-orden1.mostrarOrden();
-
 let orden2 = new Orden();
-let producto3 = new Producto('Cinturon', 50);
-orden2.agregarProducto(producto3);
-orden2.agregarProducto(producto1);
-orden2.agregarProducto(producto2);
-orden2.agregarProducto(producto3);
-orden2.agregarProducto(producto1);
-orden2.agregarProducto(producto2);
+let orden3 = new Orden();
+orden2.agregarProductos(producto1);
+orden1.agregarProductos(producto1);
+orden3.agregarProductos(producto2);
+orden1.mostrarOrden();
 orden2.mostrarOrden();
+orden3.mostrarOrden();
