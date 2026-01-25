@@ -81,8 +81,45 @@ class Monitor{
     }
 }
 
-let monitor1 = new Monitor();
-monitor1.marca = "Nvdia";
-monitor1.tamano = "9:16";
+class Computadora{
+    static contadorComputadoras = 0;
+    constructor(nombre,monitor,teclado,raton){
+        this._nombre = nombre;
+        this._monitor = monitor;
+        this._teclado = teclado;
+        this._raton = raton;
+        this._idcomputadora = ++ Computadora.contadorComputadoras;
+    }
+    get idcomputadora(){
+        return this._idcomputadora;
+    }
+    get nombre(){
+        return this._nombre;
+    }
+    set nombre(nombre){
+        return this._nombre;
+    }
+    get monitor(){
+        return this._monitor;
+    }
+    set monitor(monitor){
+        return this._monitor = monitor;
+    }
+    get teclado(){
+        return this._teclado;
+    }
+    set teclado(teclado){
+        return this._teclado = teclado;
+    }
+    get raton(){
+        return this._raton;
+    }
+    set raton(raton){
+        return this._raton = raton;
+    }
 
-console.log(monitor1.toString());
+    toString(){
+        return `ID: ${this._idcomputadora}\nNOMBRE: ${this._nombre}\nMONITOR: ${this._monitor}\nTECLADO: ${this._teclado}\nMOUSES: ${this._raton}`;
+    }
+
+}
