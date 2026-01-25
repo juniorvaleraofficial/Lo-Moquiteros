@@ -35,13 +35,54 @@ class Raton extends DispositivoEntrada{
     }
 }
 
-let mouse1 = new Raton();
-let mouse2 = new Raton();
+class Teclado extends DispositivoEntrada{
+    static contadorTeclados = 0;
+    constructor(tipoEntrada, marca){
+        super(tipoEntrada, marca);
+        this._idTeclados = ++Teclado.contadorTeclados;
+    }
 
-mouse1._marca = "acer";
-mouse1._tipoEntrada = "USB";
-mouse2._marca = "Windows Mouses";
-mouse2._tipoEntrada = "Tipo C";
+    get idTeclados(){
+        return this.idTeclados;
+    }
 
-console.log(mouse1.toString());
-console.log(mouse2.toString());
+    toString(){
+        return `\nID: ${this._idTeclados} \nTipo de entrada: ${this.tipoEntrada}\nMarca: ${this._marca}`;
+    }
+}
+
+class Monitor{
+    static contadorMonitores = 0;
+    constructor(marca, tamano){
+        this._marca = marca;
+        this._tamano = tamano;
+        this._idMonitor = ++Monitor.contadorMonitores;
+    }
+    get idMonitor(){
+        return this._idMonitor;
+    }
+
+    get marca(){
+        return this._marca;
+    }
+    set marca(marca){
+        return this._marca = marca;
+    }
+
+    get tamano(){
+        return this._tamano;
+    }
+    set tamano(tamano){
+        return this._tamano = tamano;
+    }
+
+    toString(){
+        return`ID: ${this.idMonitor}\nMarca: ${this.marca}\nTamaño: ${this.tamano}`;
+    }
+}
+
+let monitor1 = new Monitor();
+monitor1.marca = "Nvdia";
+monitor1.tamano = "9:16";
+
+console.log(monitor1.toString());
