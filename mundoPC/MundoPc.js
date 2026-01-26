@@ -119,7 +119,65 @@ class Computadora{
     }
 
     toString(){
-        return `ID: ${this._idcomputadora}\nNOMBRE: ${this._nombre}\nMONITOR: ${this._monitor}\nTECLADO: ${this._teclado}\nMOUSES: ${this._raton}`;
+        return `\nID: ${this._idcomputadora}\nNOMBRE: ${this._nombre}\nMONITOR: ${this._monitor}\nTECLADO: ${this._teclado}\nMOUSES: ${this._raton}`;
     }
 
 }
+
+class Orden{
+    static contadorOrdenes = 0;
+    static MAX_ORDENES(){
+        return 3;
+    }
+    constructor(){
+        this._computadora = [];
+        this._idOrdenes = ++Orden.contadorOrdenes;
+    }
+    agregarComputadora(computadora){
+        if(this._computadora.length < Orden.MAX_ORDENES()){
+            this._computadora.push(computadora);
+        }
+        else{
+            return "Agregue una cantidad valida: ";
+        }
+
+    }
+    get idOrdenes(){
+        return this._idOrdenes;
+    }
+    get computadora(){
+        return this._computadora;
+    }
+    set computadora(computadora){
+        return this._computadora = computadora;
+    }
+
+    toString(){
+        return `ID Orden ${this.idOrdenes}\nComputadora: ${this._computadora}`;
+    }
+
+}
+
+let mouse1 = new Raton();
+let teclado1 = new Teclado();
+let monitor1 = new Monitor();
+
+mouse1._marca = "Mouse pad"
+mouse1._tipoEntrada = "USB";
+teclado1._marca = "Teclado luminico";
+teclado1._tipoEntrada = "C";
+monitor1._marca = "SMI";
+monitor1._tamano = "9:16";
+
+let pcGamer = new Computadora();
+
+pcGamer._nombre = "PC GAMER";
+pcGamer._monitor = monitor1.marca;
+pcGamer._teclado = teclado1._marca;
+pcGamer._raton = mouse1._marca;
+
+let orden1 = new Orden();
+
+orden1.agregarComputadora(pcGamer);
+
+console.log(orden1.toString());

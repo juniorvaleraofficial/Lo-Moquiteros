@@ -46,7 +46,7 @@ class Orden{
     }
 
     agregarProductos(producto){
-        if(this._producto.length < Orden.MAX_PRODUCTOS){
+        if(this._producto.length < Orden.MAX_PRODUCTOS()){
             this._producto.push(producto);
         }
         else{
