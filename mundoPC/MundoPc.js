@@ -119,7 +119,7 @@ class Computadora{
     }
 
     toString(){
-        return `\nID: ${this._idcomputadora}\nNOMBRE: ${this._nombre}\nMONITOR: ${this._monitor}\nTECLADO: ${this._teclado}\nMOUSES: ${this._raton}`;
+        return `\nID COMPUTADORA: ${this._idcomputadora}\nNOMBRE: ${this._nombre}\nMONITOR: ${this._monitor}\nTECLADO: ${this._teclado}\nMOUSES: ${this._raton}`;
     }
 
 }
@@ -142,6 +142,14 @@ class Orden{
         }
 
     }
+
+    mostrarOrden(){
+        for (const key in this._computadora) {
+            if (!Object.hasOwn(this._computadora, key)) continue;
+            const miOrden = this._computadora[key];
+            console.log(`ID Orden ${this._idOrdenes}\nMI Orden:{${miOrden}\n}`);
+        }
+    }
     get idOrdenes(){
         return this._idOrdenes;
     }
@@ -152,32 +160,68 @@ class Orden{
         return this._computadora = computadora;
     }
 
-    toString(){
-        return `ID Orden ${this.idOrdenes}\nComputadora: ${this._computadora}`;
-    }
-
 }
-
+// declarar Objetos
 let mouse1 = new Raton();
+let mouse2 = new Raton();
+let mouse3 = new Raton();
 let teclado1 = new Teclado();
+let teclado2 = new Teclado();
 let monitor1 = new Monitor();
+let monitor2 = new Monitor();
+let pcGamer = new Computadora();
+let pcEscritorio = new Computadora();
+let pcPortatil = new Computadora();
+let orden1 = new Orden();
+let orden2 = new Orden();
+let orden3 = new Orden();
+let orden4 = new Orden();
 
+// Objetos tipo Raton
 mouse1._marca = "Mouse pad"
 mouse1._tipoEntrada = "USB";
-teclado1._marca = "Teclado luminico";
-teclado1._tipoEntrada = "C";
+mouse2._marca = " Logitech G";
+mouse2._tipoEntrada = "HDMI";
+mouse3._marca = "Dell";
+mouse3._tipoEntrada = "HDMI";
+
+// Objetos tipo teclado
+teclado1._marca = "Teclado Logitech";
+teclado1._tipoEntrada = "USB";
+teclado2._marca = "Teclado Portatil";
+teclado2._tipoEntrada = "USB";
+
+// Objetos tipo Monitor
 monitor1._marca = "SMI";
 monitor1._tamano = "9:16";
+monitor2._marca = "Asus stand";
+monitor2._tamano = "1080 full HD";
 
-let pcGamer = new Computadora();
-
-pcGamer._nombre = "PC GAMER";
+// Objetos tipo Computadora
+pcGamer._nombre = "Lenovo";
 pcGamer._monitor = monitor1.marca;
 pcGamer._teclado = teclado1._marca;
-pcGamer._raton = mouse1._marca;
+pcGamer._raton = mouse2._marca;
 
-let orden1 = new Orden();
+pcEscritorio._nombre = "Dell";
+pcEscritorio._monitor = monitor2._marca;
+pcEscritorio._teclado = teclado1._marca;
+pcEscritorio._raton = mouse3._marca;
 
+pcPortatil._nombre = "Apple";
+pcPortatil._monitor = monitor2._marca;
+pcPortatil._teclado = teclado2._marca;
+pcPortatil.raton = mouse2._marca;
+
+
+// Agregar orden:
 orden1.agregarComputadora(pcGamer);
+orden2.agregarComputadora(pcEscritorio);
+orden3.agregarComputadora(pcPortatil);
+orden4.agregarComputadora(pcPortatil);
 
-console.log(orden1.toString());
+// Imprimir orden:
+console.log(orden1.mostrarOrden());
+console.log(orden2.mostrarOrden());
+console.log(orden3.mostrarOrden());
+console.log(orden4.mostrarOrden());
