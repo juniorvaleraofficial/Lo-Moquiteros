@@ -8,11 +8,21 @@
 <body> 
     <a href="index.html" style="text-decoration: none;">Inicio</a><br>
     <h1>Formularios en HTML:</h1>
-    <form>
+    <form method="get">
         <label for="nombre">Nombre: </label><br>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br>
         <label for="nombre">Apellido: </label><br>
         <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"><br>
+
+        <label for="contraseña">Contraseña: </label><br>
+        <input type="password" id="contraseña" name="contraseña" required="true"><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Escribe tu email" required="true"><br>
+
+        <label for="edad">Edad</label><br>
+        <input type="number" id="edad" name="edad" placeholder="Escribe tu Edad" required="true"><br>
+
         <input type="submit" value="Enviar">
         <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
     </form>
