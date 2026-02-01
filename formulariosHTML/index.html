@@ -12,7 +12,6 @@
         <!-- input tipo text -->
         <label for="nombre">Nombre: </label><br>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br>
-
         <label for="nombre">Apellido: </label><br>
         <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"><br>
         <!-- input tipo password -->
@@ -38,7 +37,15 @@
           <input type="checkbox" id="carne" name="comida" value="carne"><br>
           <label for="vegetales">Vegetales</label>
           <input type="checkbox" id="vegetales" name="comida" value="vegetales"><br>
-
+          <!-- select para seleccionar multiples opciones -->
+           <label for="autos">Marcas de autos Favoritas</label><br>
+           <select name="autos" id="autos">
+            <option value="Ferrari">Ferrari</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Porsche">Porsche</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Aston-Martin" selected="true">Aston Martin</option>
+           </select><br>
         <input type="submit" value="Enviar">
         <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
     </form>
