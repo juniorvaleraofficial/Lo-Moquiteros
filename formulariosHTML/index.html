@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body> 
+    <a href="index.html" style="text-decoration: none;">Inicio</a><br>
+    <h1>Formularios en HTML:</h1>
+    <form method="get">
+        <!-- input tipo text -->
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br>
+        <label for="nombre">Apellido: </label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"><br>
+        <!-- input tipo password -->
+        <label for="contraseña">Contraseña: </label><br>
+        <input type="password" id="contraseña" name="contraseña" required="true"><br>
+        <!-- input tipo email -->
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Escribe tu email" required="true"><br>
+        <!-- input tipo number -->
+        <label for="edad">Edad</label><br>
+        <input type="number" id="edad" name="edad" placeholder="Escribe tu Edad" required="true"><br>
+        <!-- input tipo radio -->
+         <label>Genero Musical</label><br>
+         <label for="clasica">Clasica</label>
+         <input type="radio" id="clasica" name="musica" value="clasica"><br>
+         <label for="urbana">Urbana</label>
+         <input type="radio" id="urbana" name="musica" value="urbana"><br>
+         <!-- input tipo checkbox -->
+          <label>Comida Favorita</label><br>
+          <label for="fruta">Fruta</label>
+          <input type="checkbox" id="fruta" name="comida" value="fruta"><br>
+          <label for="carne">Carne</label>
+          <input type="checkbox" id="carne" name="comida" value="carne"><br>
+          <label for="vegetales">Vegetales</label>
+          <input type="checkbox" id="vegetales" name="comida" value="vegetales"><br>
+          <!-- select para seleccionar multiples opciones -->
+           <label for="autos">Marcas de autos Favoritas</label><br>
+           <select name="autos" id="autos">
+            <option value="Ferrari">Ferrari</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Porsche">Porsche</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Aston-Martin" selected="true">Aston Martin</option>
+           </select><br>
+           <!-- textarea para textos largos -->
+           <label for="comentario">Comentarios:</label><br>
+           <textarea name="comentario" id="comentario" rows="10" cols="70"></textarea><br>
+        <input type="submit" value="Enviar">
+        <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
+    </form>
+</body>
+</html>
