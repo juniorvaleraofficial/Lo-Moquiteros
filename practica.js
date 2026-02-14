@@ -1,3 +1,7 @@
+"use strict";// uso de modo strict
+let x = 5;
+
+console.log(x);
 // Modulo Funciones incorporadas JavaScript
 
 //Redondeo y truncado en JavaScript
