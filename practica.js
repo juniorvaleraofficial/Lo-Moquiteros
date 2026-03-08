@@ -1,5 +1,11 @@
 "use strict";// uso de modo strict
 let x = 5;
+try {
+    y = 20;
+    
+} catch (error) {
+    console.log(error);
+}
 
 console.log(x);
 // Modulo Funciones incorporadas JavaScript
