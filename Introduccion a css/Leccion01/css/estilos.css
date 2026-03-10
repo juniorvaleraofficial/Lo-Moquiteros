@@ -4,3 +4,11 @@
     color: goldenrod;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.texto_grande{
+    font-size: 25px;
+}
+
+.centrar{
+    text-align: center;
+}
