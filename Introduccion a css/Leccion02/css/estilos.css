@@ -1,0 +1,31 @@
+*{
+    background-color: rgb(148, 139, 139);
+}
+h1{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.colorwhite{
+    color: white;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.aqua{
+    background-color: aqua;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.fuchsia{
+    background-color: fuchsia;
+}
+
+.green{
+    background-color: green;
+}
