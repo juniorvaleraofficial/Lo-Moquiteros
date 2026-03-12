@@ -1,27 +1,23 @@
 *{
-    background-color: rgb(254, 254, 238);
+    background-color: rgb(254, 238, 244);
 }
 h1{
     text-align: center;
     color: rgb(22, 20, 20);
 }
 
-.rojo{
-    border: 5px solid red;
+.mixto{
+    border-style: dashed double solid groove;
+    border-width: 10px;
 }
-
-.aqua{
-    border: 5px dotted hwb(180 0% 0%);
+.dotted{
+    border: 10px dotted blanchedalmond;
 }
-
-.blue{
-    border: 5px dashed rgb(0, 0, 255);
+.dashed{
+    border-style: dashed;
+    border-width: 10px;
+    border-color: brown;
 }
-
-.fuchsia{
-    border: 5px double #ff00ff;
-}
-
-.green{
-    border: 5px groove green;
+.double{
+    border: 10px double palevioletred;
 }
