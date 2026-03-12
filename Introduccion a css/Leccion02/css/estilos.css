@@ -1,31 +1,27 @@
 *{
-    background-color: rgb(148, 139, 139);
+    background-color: rgb(254, 254, 238);
 }
 h1{
     text-align: center;
-    color: whitesmoke;
-}
-
-.colorwhite{
-    color: white;
+    color: rgb(22, 20, 20);
 }
 
 .rojo{
-    background-color: red;
+    border: 5px solid red;
 }
 
 .aqua{
-    background-color: aqua;
+    border: 5px dotted hwb(180 0% 0%);
 }
 
 .blue{
-    background-color: blue;
+    border: 5px dashed rgb(0, 0, 255);
 }
 
 .fuchsia{
-    background-color: fuchsia;
+    border: 5px double #ff00ff;
 }
 
 .green{
-    background-color: green;
+    border: 5px groove green;
 }
