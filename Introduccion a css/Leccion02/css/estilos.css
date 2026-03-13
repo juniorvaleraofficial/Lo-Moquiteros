@@ -1,23 +1,21 @@
 *{
     background-color: rgb(254, 238, 244);
+    text-align: center;
 }
 h1{
     text-align: center;
     color: rgb(22, 20, 20);
 }
 
-.mixto{
-    border-style: dashed double solid groove;
+.solido{
+    border: solid;
     border-width: 10px;
+    border-color: red yellow palevioletred powderblue;
+    border-radius: 20px 0px 15px 0px;
 }
-.dotted{
-    border: 10px dotted blanchedalmond;
-}
-.dashed{
-    border-style: dashed;
+
+.redondeado{
+    border: blue solid;
     border-width: 10px;
-    border-color: brown;
-}
-.double{
-    border: 10px double palevioletred;
+    border-radius: 20px;
 }
